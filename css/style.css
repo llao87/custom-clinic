@@ -1,0 +1,252 @@
+/* reset.css v2.0 */
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+/* Fonts */
+
+@font-face {
+    font-family: "Roboto";
+    /* src: url(WebFont.eot?) format("eot"), /* IE8+, знак ? позволяет обойти баг в обработчике значения src */
+    /* url(WebFont.woff) format("woff"), /* все современные браузеры, IE9+ */
+    src: url(../fonts/Roboto-Regular.ttf) format("truetype");
+    /* все современные браузеры */
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    /* src: url(WebFont.eot?) format("eot"), /* IE8+, знак ? позволяет обойти баг в обработчике значения src */
+    /* url(WebFont.woff) format("woff"), /* все современные браузеры, IE9+ */
+    src: url(../fonts/Montserrat-Regular.ttf) format("truetype");
+    /* все современные браузеры */
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+/* Style.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+    line-height: 1;
+}
+
+html,
+body {
+    width: 100vw;
+    height: 100vh;
+    font-family: Roboto, sans-serif;
+}
+
+body {
+    font-size: 20px;
+    background-image: url(../img/bg.jpg);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-color: #010810;
+}
+
+@media screen and (orientation: landscape) {
+    body {
+        font-size: 1.041666vw;
+        background-size: contain;
+    }
+}
+
+@media screen and (orientation: portrait) {
+    body {
+        /* font-size: 1.041666vh; */
+        font-size: 1.2vh;
+        background-size: 220% 102%, contain;
+    }
+}
+
+.logo {
+    display: inline-flex;
+    position: absolute;
+    width: 18em;
+    height: 6em;
+    left: 50%;
+    transform: translateX(-50%);
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    top: 2.1em;
+}
+
+.logo .logo__link {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo .logo__link .logo__img {
+    width: 100%;
+    height: auto;
+}
+
+.offer {
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.732em;
+    text-align: center;
+    top: 6.05em;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    color: #fff;
+    /* text-shadow: 0 0 10px #000000; */
+}
+
+.offer .offer__text {}
+
+.offer .offer__text br {}
+
+.offer .offer__text .offer__text-row {
+    display: block;
+}
+
+.offer .offer__text .offer__text-row:first-child {
+    margin-bottom: 0.45em;
+}
+
+.offer .offer__text .offer__text-row:last-child {}
