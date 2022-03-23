@@ -138,8 +138,6 @@ table {
 
 @font-face {
     font-family: "Roboto";
-    /* src: url(WebFont.eot?) format("eot"), /* IE8+, знак ? позволяет обойти баг в обработчике значения src */
-    /* url(WebFont.woff) format("woff"), /* все современные браузеры, IE9+ */
     src: url(../fonts/Roboto-Regular.ttf) format("truetype");
     /* все современные браузеры */
     font-weight: 400;
@@ -148,12 +146,18 @@ table {
 
 @font-face {
     font-family: "Montserrat";
-    /* src: url(WebFont.eot?) format("eot"), /* IE8+, знак ? позволяет обойти баг в обработчике значения src */
-    /* url(WebFont.woff) format("woff"), /* все современные браузеры, IE9+ */
     src: url(../fonts/Montserrat-Regular.ttf) format("truetype");
     /* все современные браузеры */
     font-weight: 400;
     font-style: normal;
+}
+
+@font-face {
+    font-family: "Montserrat-Bold";
+    src: url(../fonts/Montserrat-Bold.ttf) format("truetype");
+    /* все современные браузеры */
+    font-weight: 400;
+    font-style: bold;
 }
 
 
@@ -171,7 +175,14 @@ html,
 body {
     width: 100vw;
     height: 100vh;
-    font-family: Roboto, sans-serif;
+    width: 100%;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
 body {
@@ -184,16 +195,28 @@ body {
 
 @media screen and (orientation: landscape) {
     body {
-        font-size: 1.041666vw;
-        background-size: contain;
+        /* font-size: 1.041666vw; */
+        /* background-size: 100%; */
+        font-size: 2.05vh;
+        background-size: 178.7vh;
     }
 }
 
 @media screen and (orientation: portrait) {
     body {
         /* font-size: 1.041666vh; */
-        font-size: 1.2vh;
-        background-size: 220% 102%, contain;
+        /* font-size: 2vw; */
+        /* background-size: 210vw; */
+        font-size: 3vw;
+        /* background-size: 310vw; */
+        background-size: 170vh;
+    }
+}
+
+@media screen and (orientation: portrait) and (max-width: 700px) {
+    html,
+    body {
+        /* height: 90vh; */
     }
 }
 
@@ -207,7 +230,8 @@ body {
     overflow: hidden;
     justify-content: center;
     align-items: center;
-    top: 2.1em;
+    /* top: 2.1em; */
+    top: 4.5%;
 }
 
 .logo .logo__link {
@@ -225,19 +249,45 @@ body {
 }
 
 .offer {
+    width: 15.2em;
+    position: absolute;
     display: inline-block;
     left: 50%;
     transform: translateX(-50%);
     font-size: 1.732em;
     text-align: center;
-    top: 6.05em;
+    /* top: 6.05em; */
+    top: 21.7%;
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     color: #fff;
     /* text-shadow: 0 0 10px #000000; */
 }
 
-.offer .offer__text {}
+.offer::after {
+    position: absolute;
+    display: inline-block;
+    content: '?';
+    font-weight: bold;
+    font-size: 10em;
+    top: -0.34em;
+    right: -0.175em;
+    font-family: 'Montserrat-Bold', sans-serif;
+    opacity: 0.4;
+    color: #095b9d;
+    z-index: -1;
+}
+
+.offer .offer__text {
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+    transition: 0.3s linear;
+}
+
+.offer .offer__text:hover {
+    color: #fbd077;
+}
 
 .offer .offer__text br {}
 
@@ -250,3 +300,57 @@ body {
 }
 
 .offer .offer__text .offer__text-row:last-child {}
+
+.coming-soon {
+    position: absolute;
+    display: inline-block;
+    color: #fff;
+    font-size: 3.5em;
+    font-family: 'Montserrat';
+    font-weight: normal;
+    text-transform: uppercase;
+    /* top: 8.32em; */
+    top: 60%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    /* letter-spacing: 0.01em; */
+    text-shadow: 0 0 60px #000, 0 0 20px #000;
+}
+
+@media screen and (orientation: landscape) {
+    .coming-soon br {
+        display: none;
+    }
+}
+
+@media screen and (orientation: portrait) {
+    .coming-soon br {
+        display: inline-block;
+        top: auto;
+        bottom: 30%;
+    }
+}
+
+.copyrights {
+    position: absolute;
+    color: #fbd077;
+    text-transform: uppercase;
+    /* top: 56.3em; */
+    top: 95%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.815em;
+}
+
+@media screen and (orientation: landscape) {
+    .copyrights {}
+}
+
+@media screen and (orientation: portrait) {
+    .copyrights {
+        /* top: 96%; */
+        top: auto;
+        bottom: 3%;
+    }
+}

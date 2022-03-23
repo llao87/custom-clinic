@@ -17,13 +17,13 @@
     </div>
 
     <div class="offer">
-        <p class="offer__text">
+        <a href="#" class="offer__text">
             <span class="offer__text-row">Зачем пересаживать волосы </span>
             <span class="offer__text-row">в России весной 2022 года</span>
-        </p>
+        </a>
     </div>
 
-    <div class="coming-soon">Скоро открытие</div>
+    <div class="coming-soon">Скоро <br> открытие</div>
 
     <div class="copyrights">Центр эстетической медицины</div>
 
